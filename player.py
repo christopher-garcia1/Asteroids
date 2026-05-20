@@ -5,7 +5,7 @@ from constants import PLAYER_RADIUS,LINE_WIDTH,PLAYER_TURN_SPEED,PLAYER_SPEED
 
 class Player(CircleShape):
     def __init__(self, x, y):
-        super().__init__(x, y , PLAYER_RADIUS)
+        super().__init__(x, y , PLAYER_RADIUS)  
 
         self.rotation = 0
 
@@ -41,4 +41,5 @@ class Player(CircleShape):
         rotated_vector = unit_vector.rotate(self.rotation)
         rotated_with_speed_vector = rotated_vector * PLAYER_SPEED * dt
         self.position += rotated_with_speed_vector
+
 
